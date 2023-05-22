@@ -1,5 +1,5 @@
 # wiki
-<img width="50%" src="https://github.com/BDadmehr0/game-of-life-python/blob/main/src/Gospers_glider_gun.gif">
+<img width="50%" algin='right' src="https://github.com/BDadmehr0/game-of-life-python/blob/main/src/Gospers_glider_gun.gif">
 "Conway game" redirects here.
 For Conway's surreal number game theory,
 see Surreal number.
