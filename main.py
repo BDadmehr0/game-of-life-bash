@@ -49,3 +49,28 @@ def update_grid(grid):
                     new_grid[i][j] = 1
     return new_grid
 
+# main game loop
+running = True
+while running:
+    # handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # update the grid
+    grid = update_grid(grid)
+
+    # draw the grid
+    for i in range(grid_height):
+        for j in range(grid_width):
+            if grid[i][j] == 1:
+                color = alive_color
+            else:
+                color = dead_color
+            pygame.draw.rect(screen, color, (j*cell_width, i*cell_height, cell_width, cell_height))
+
+    # update the display
+    pygame.display.flip()
+
+# quit pygame
+pygame.quit()
