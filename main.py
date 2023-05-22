@@ -23,3 +23,29 @@ cell_height = screen_height // grid_height
 # set the colors for the cells
 alive_color = (255, 255, 255)
 dead_color = (0, 0, 0)
+
+# define a function to update the grid
+def update_grid(grid):
+    new_grid = np.zeros_like(grid)
+    for i in range(grid_height):
+        for j in range(grid_width):
+            neighbors = (
+                grid[(i-1)%grid_height][(j-1)%grid_width] +
+                grid[(i-1)%grid_height][j] +
+                grid[(i-1)%grid_height][(j+1)%grid_width] +
+                grid[i][(j-1)%grid_width] +
+                grid[i][(j+1)%grid_width] +
+                grid[(i+1)%grid_height][(j-1)%grid_width] +
+                grid[(i+1)%grid_height][j] +
+                grid[(i+1)%grid_height][(j+1)%grid_width]
+            )
+            if grid[i][j] == 1:
+                if neighbors < 2 or neighbors > 3:
+                    new_grid[i][j] = 0
+                else:
+                    new_grid[i][j] = 1
+            else:
+                if neighbors == 3:
+                    new_grid[i][j] = 1
+    return new_grid
+
