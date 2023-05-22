@@ -1,11 +1,10 @@
 # wiki
-<div align="right">
-    <img width="50%" src="https://github.com/BDadmehr0/game-of-life-python/blob/main/src/Gospers_glider_gun.gif">
-</div>
 "Conway game" redirects here.
 
 For Conway's surreal number game theory,
-
+<div align="right">
+    <img width="50%" src="https://github.com/BDadmehr0/game-of-life-python/blob/main/src/Gospers_glider_gun.gif">
+</div>
 see Surreal number.
 
 A single Gosper's glider gun creating gliders
